@@ -28,7 +28,7 @@ namespace _2_14fi_hunger_games
         }
         void KetchupClick(object s, EventArgs e)
         {
-            if (money < 10)
+            if (money >= 10)
             {
                 string content = kolbasz.Content.ToString();
                 if (content.Length > 0)
@@ -54,7 +54,7 @@ namespace _2_14fi_hunger_games
         {
             kolbasz.Content = "Kolbász";
             int ehsegSzazalek = int.Parse(ehseg.Content.ToString().Trim('%'));
-            ehseg.Content = (ehsegSzazalek + 20).ToString() + '%';
+            ehseg.Content = (ehsegSzazalek + 20) + "%";
             if (ehsegSzazalek + 20 > 100)
             {
                 MessageBox.Show("Éhen haltál!");
