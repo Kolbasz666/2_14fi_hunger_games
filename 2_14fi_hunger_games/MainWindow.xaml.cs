@@ -28,7 +28,7 @@ namespace _2_14fi_hunger_games
         }
         void KetchupClick(object s, EventArgs e)
         {
-            if (money >= 10)
+            if (money < 10)
             {
                 string content = kolbasz.Content.ToString();
                 if (content.Length > 0)
@@ -40,11 +40,11 @@ namespace _2_14fi_hunger_games
                         ehseg.Content = (ehsegSzazalek - 5).ToString() + '%';
                     }
                     EhsegBackground();
+                    money -= 10;
+                    moneyInput.Text = money.ToString();
                 }
-                money -= 10;
-                moneyInput.Text = money.ToString();
             }
-            
+
         }
         void KolbaszClick(object s, EventArgs e)
         {
